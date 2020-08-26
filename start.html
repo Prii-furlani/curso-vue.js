@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js - Primeiro Exemplo</title>
+</head>
+<body>
+    
+    <div id="start">
+        <h1>{{ message  }}</h1>
+
+    </div>
+
+    <script src="vue.js"></script>
+
+    <script>
+
+        //desta maneira da para mudar pelo console a mensagem que ele ira exibir
+        // ex: estou la no console e coloco app.message e dou enter ele vai trazer a mensagem que ja esta instanciada
+        //  se eu colocar app.message = 'olá mundo!' e der enter ele já vai mudar da pagina o texto que esta escrito
+        //  lembrando é o nome que foi dado aqui em baixo "app" e nome da variavel que esta armazenada a mensagem
+        let app = new Vue({
+            el: '#start',
+            data:{
+                message: 'Hello Worl. Estou usando o vue!'
+            }
+        })
+    </script>
+</body>
+</html>
